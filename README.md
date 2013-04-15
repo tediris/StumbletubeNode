@@ -1,0 +1,1 @@
+A NodeJs implementation of stumbletube, a stumbleupon like app for videos that adjust what it shows based on user response

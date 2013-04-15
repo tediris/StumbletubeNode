@@ -1,0 +1,285 @@
+<head>
+  <title>stumbletube</title>
+
+  
+  <link rel="stylesheet" type="text/css" href="bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="stumbletube.css">
+  <link rel="stylesheet" type="text/css" href="topnavbar.css">
+  <link rel="stylesheet" type="text/css" href="changes.css">
+  
+
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="bootstrap.js"></script>
+  <script type="text/javascript" src="swfobject.js"></script>
+  <script type="text/javascript" src="stumbletube.js"></script>
+  <script type="text/javascript" src="video.js"></script>
+</head>
+
+<body>
+  <div class="navbar navbar-inverse"  style="position: static,">
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="nav-collapse collapse navbar-responsive-collapse">
+          <ul class="nav">
+            <li>
+              <a class="brand" href="#"><strong>StumbleTube</strong></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="icon-cog icon-white"></i> 
+                <b class="caret"?></b>
+              </a>
+              <ul class="dropdown-menu" id="category-menu">
+                <li class="nav-header">Categories</li>
+                <li id="Auto">
+                  <a tabindex="-1" href="#">
+                    <label class="checkbox">
+                      <input type="checkbox" id="auto">Auto
+                    </label>
+                  </a>
+                </li>
+                <li id="Comedy">
+                  <a tabindex="-1" href="#">
+                    <label class="checkbox">
+                      <input type="checkbox" id="comedy">Comedy
+                    </label>
+                  </a>
+                </li>
+                <li id="Education">
+                  <a tabindex="-1" href="#">
+                    <label class="checkbox">
+                      <input type="checkbox" id="education">Education
+                    </label>
+                  </a>
+                </li>
+                <li id="Entertainment">
+                  <a tabindex="-1" href="#">
+                    <label class="checkbox">
+                      <input type="checkbox" id="entertainment">Entertainment
+                    </label>
+                  </a>
+                </li>
+                <li id="Film">
+                  <a tabindex="-1" href="#">
+                    <label class="checkbox">
+                      <input type="checkbox" id="film">Film
+                    </label>
+                  </a>
+                </li>
+                <li id="Music">
+                  <a tabindex="-1" href="#">
+                    <label class="checkbox">
+                      <input type="checkbox" id="music">Music
+                    </label>
+                  </a>
+                </li>
+                <li id="Gaming">
+                  <a tabindex="-1" href="#">
+                    <label class="checkbox">
+                      <input type="checkbox" id="gaming">Gaming
+                    </label>
+                  </a>
+                </li>
+                <li id="Style">
+                  <a tabindex="-1" href="#">
+                    <label class="checkbox">
+                      <input type="checkbox" id="style">Style
+                    </label>
+                  </a>
+                </li>
+                <li id="Politics">
+                  <a tabindex="-1" href="#">
+                    <label class="checkbox">
+                      <input type="checkbox" id="politics">Politics
+                    </label>
+                  </a>
+                </li>
+                <li id="Activism">
+                  <a tabindex="-1" href="#">
+                    <label class="checkbox">
+                      <input type="checkbox" id="activism">Activism
+                    </label>
+                  </a>
+                </li>
+                <li id="People">
+                  <a tabindex="-1" href="#">
+                    <label class="checkbox">
+                      <input type="checkbox" id="people">People/Vlogs
+                    </label>
+                  </a>
+                </li>
+                <li id="Animals">
+                  <a tabindex="-1" href="#">
+                    <label class="checkbox">
+                      <input type="checkbox" id="animals">Animals
+                    </label>
+                  </a>
+                </li>
+                <li id="Science">
+                  <a tabindex="-1" href="#">
+                    <label class="checkbox">
+                      <input type="checkbox" id="science">Science/Tech
+                    </label>
+                  </a>
+                </li>
+                <li id="Sports">
+                  <a tabindex="-1" href="#">
+                    <label class="checkbox">
+                      <input type="checkbox" id="sports">Sports
+                    </label>
+                  </a>
+                </li>
+                <li id="Travel">
+                  <a tabindex="-1" href="#">
+                    <label class="checkbox">
+                      <input type="checkbox" id="travel">Travel
+                    </label>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="divider-vertical"></li>
+            <li>
+              <a class="brand" href ="#" id="videotitle"></a>
+            </li>
+          </ul>
+          <ul class="nav pull-right">
+            <li class="divider-vertical"></li>
+            <li>
+              <div class="btn-group">
+                <button class="btn btn-inverse" id="play">
+                  <i class="icon-pause icon-white"></i>
+                   | 
+                  <i class="icon-play icon-white"></i>
+                </button>
+                <button class="btn btn-inverse" id="next"><i class="icon-step-forward icon-white"></i></button>
+              </div>
+            </li>
+            <li class="divider-vertical"></li>
+            <li>
+              <div class="btn-group">
+                <button class="btn btn-inverse" id="dislike"><i class="icon-thumbs-down icon-white"></i></button>
+                  <button class="btn btn-inverse" id="like"  ><i class="icon-thumbs-up icon-white"></i>
+                  </button>
+
+              </div>
+            </li>
+          </ul>
+        </div>  
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-unit" id="banner">
+    <h1 class="introtext">Welcome to StumbleTube!</h1>
+    <p></p>
+    <p class="introtext">
+      This site applies the power of StumbleUpon to the videos of Youtube. Use the play/pause and skip buttons to control playback and the dislike and like buttons to help the site find you better videos. Want to narrow down video topics? Click the cog to browse categories.
+    </p>
+    <h6><em id="disclaimer">Minimum window width is 1000px.</em></h6>
+    <p>
+      <a href="#preference-modal" class="btn btn-success btn-large" id="start-watching" data-toggle="modal">Start watching!</a>
+    </p>
+  </div>
+
+  <div id="preference-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="false">
+
+  <div class="well well-small">
+    <label class="checkbox">
+      <input type="checkbox" id="au"> Auto
+    </label>
+  </div>
+
+  <div class="well well-small">
+    <label class="checkbox">
+      <input type="checkbox" id="co"> Comedy
+    </label>
+  </div>
+
+  <div class="well well-small">
+    <label class="checkbox">
+      <input type="checkbox" id="ed"> Education
+    </label>
+  </div>
+
+  <div class="well well-small">
+    <label class="checkbox">
+      <input type="checkbox" id="en"> Entertainment
+    </label>
+  </div>
+
+  <div class="well well-small">
+    <label class="checkbox">
+      <input type="checkbox" id="fi"> Film
+    </label>
+  </div>
+
+  <div class="well well-small">
+    <label class="checkbox">
+      <input type="checkbox" id="mu"> Music
+    </label>
+  </div>
+
+  <div class="well well-small">
+    <label class="checkbox">
+      <input type="checkbox" id="ga"> Gaming
+    </label>
+  </div>
+
+  <div class="well well-small">
+    <label class="checkbox">
+      <input type="checkbox" id="st"> Style
+    </label>
+  </div>
+
+  <div class="well well-small">
+    <label class="checkbox">
+      <input type="checkbox" id="po"> Politics
+    </label>
+  </div>
+
+  <div class="well well-small">
+    <label class="checkbox">
+      <input type="checkbox" id="ac"> Activism
+    </label>
+  </div>
+
+  <div class="well well-small">
+    <label class="checkbox">
+      <input type="checkbox" id="pe"> People/Vlogs
+    </label>
+  </div>
+
+  <div class="well well-small">
+    <label class="checkbox">
+      <input type="checkbox" id="an"> Animals
+    </label>
+  </div>
+
+  <div class="well well-small">
+    <label class="checkbox">
+      <input type="checkbox" id="sc"> Science/Tech
+    </label>
+  </div>
+
+  <div class="well well-small">
+    <label class="checkbox">
+      <input type="checkbox" id="sp"> Sports
+    </label>
+  </div>
+
+  <div class="well well-small">
+    <label class="checkbox">
+      <input type="checkbox" id="tr"> Travel
+    </label>
+  </div>
+
+
+  </div>
+
+  <div id="ytplayer">
+  	You need to have flash 8 installed
+  </div>
+  
+  
+</body>
